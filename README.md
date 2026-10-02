@@ -33,7 +33,7 @@ Notices when the agent keeps running the same failing command or flips an edit b
 
 ![Loop Breaker demo](https://github.com/ccdwyer/loop-breaker/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/loop-breaker/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/loop-breaker/raw/main/media/03-refused.png) · [Repo](https://github.com/ccdwyer/loop-breaker)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/loop-breaker.mp4) · [Screenshot](https://github.com/ccdwyer/loop-breaker/raw/main/media/03-refused.png) · [Repo](https://github.com/ccdwyer/loop-breaker)
 
 ```
 /plugin install loop-breaker@ccdwyer-mods
@@ -45,7 +45,7 @@ Refuses edits that weaken tests to fake a green run: changed expected values, lo
 
 ![Assertion Guardian demo](https://github.com/ccdwyer/assertion-guardian/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/assertion-guardian/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/assertion-guardian/raw/main/media/02-refused.png) · [Repo](https://github.com/ccdwyer/assertion-guardian)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/assertion-guardian.mp4) · [Screenshot](https://github.com/ccdwyer/assertion-guardian/raw/main/media/02-refused.png) · [Repo](https://github.com/ccdwyer/assertion-guardian)
 
 ```
 /plugin install assertion-guardian@ccdwyer-mods
@@ -57,7 +57,7 @@ Redacts credentials in prompts and tool output before the model sees them, and r
 
 ![Secret Sentry demo](https://github.com/ccdwyer/secret-sentry/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/secret-sentry/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/secret-sentry/raw/main/media/02-write-refused.png) · [Repo](https://github.com/ccdwyer/secret-sentry)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/secret-sentry.mp4) · [Screenshot](https://github.com/ccdwyer/secret-sentry/raw/main/media/02-write-refused.png) · [Repo](https://github.com/ccdwyer/secret-sentry)
 
 ```
 /plugin install secret-sentry@ccdwyer-mods
@@ -69,7 +69,7 @@ Checks packages against the npm and PyPI registries before they install. It bloc
 
 ![Dependency Bouncer demo](https://github.com/ccdwyer/dependency-bouncer/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/dependency-bouncer/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/dependency-bouncer/raw/main/media/02-blocked.png) · [Repo](https://github.com/ccdwyer/dependency-bouncer)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/dependency-bouncer.mp4) · [Screenshot](https://github.com/ccdwyer/dependency-bouncer/raw/main/media/02-blocked.png) · [Repo](https://github.com/ccdwyer/dependency-bouncer)
 
 ```
 /plugin install dependency-bouncer@ccdwyer-mods
@@ -81,7 +81,7 @@ Wraps untrusted tool output (web pages, MCP results, vendored files, fetched PR 
 
 ![Quarantine demo](https://github.com/ccdwyer/quarantine/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/quarantine/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/quarantine/raw/main/media/02-defanged.png) · [Repo](https://github.com/ccdwyer/quarantine)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/quarantine.mp4) · [Screenshot](https://github.com/ccdwyer/quarantine/raw/main/media/02-defanged.png) · [Repo](https://github.com/ccdwyer/quarantine)
 
 ```
 /plugin install quarantine@ccdwyer-mods
@@ -93,7 +93,7 @@ Enforces session and daily spend caps. It shows a gauge above the prompt, tells 
 
 ![Budget Governor demo](https://github.com/ccdwyer/budget-governor/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/budget-governor/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/budget-governor/raw/main/media/03-refused.png) · [Repo](https://github.com/ccdwyer/budget-governor)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/budget-governor.mp4) · [Screenshot](https://github.com/ccdwyer/budget-governor/raw/main/media/03-refused.png) · [Repo](https://github.com/ccdwyer/budget-governor)
 
 ```
 /plugin install budget-governor@ccdwyer-mods
@@ -107,7 +107,7 @@ Runs your project's own tsc, eslint and ruff right after each edit and attaches 
 
 ![Red Squiggle demo](https://github.com/ccdwyer/red-squiggle/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/red-squiggle/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/red-squiggle/raw/main/media/02-diagnostics.png) · [Repo](https://github.com/ccdwyer/red-squiggle)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/red-squiggle.mp4) · [Screenshot](https://github.com/ccdwyer/red-squiggle/raw/main/media/02-diagnostics.png) · [Repo](https://github.com/ccdwyer/red-squiggle)
 
 ```
 /plugin install red-squiggle@ccdwyer-mods
@@ -119,7 +119,7 @@ Tracks whether "tests passed" is still true. Later edits turn results stale on a
 
 ![Proof Decay demo](https://github.com/ccdwyer/proof-decay/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/proof-decay/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/proof-decay/raw/main/media/02-stale.png) · [Repo](https://github.com/ccdwyer/proof-decay)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/proof-decay.mp4) · [Screenshot](https://github.com/ccdwyer/proof-decay/raw/main/media/02-stale.png) · [Repo](https://github.com/ccdwyer/proof-decay)
 
 ```
 /plugin install proof-decay@ccdwyer-mods
@@ -131,7 +131,7 @@ When the agent reads or edits a file on a branch with an open PR, it attaches th
 
 ![Review Ghost demo](https://github.com/ccdwyer/review-ghost/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/review-ghost/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/review-ghost/raw/main/media/02-threads-attached.png) · [Repo](https://github.com/ccdwyer/review-ghost)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/review-ghost.mp4) · [Screenshot](https://github.com/ccdwyer/review-ghost/raw/main/media/02-threads-attached.png) · [Repo](https://github.com/ccdwyer/review-ghost)
 
 ```
 /plugin install review-ghost@ccdwyer-mods
@@ -143,7 +143,7 @@ For React Native: attaches fresh simulator and emulator errors to your next prom
 
 ![Redbox Relay demo](https://github.com/ccdwyer/redbox-relay/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/redbox-relay/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/redbox-relay/raw/main/media/02-rebuild-warning.png) · [Repo](https://github.com/ccdwyer/redbox-relay)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/redbox-relay.mp4) · [Screenshot](https://github.com/ccdwyer/redbox-relay/raw/main/media/02-rebuild-warning.png) · [Repo](https://github.com/ccdwyer/redbox-relay)
 
 ```
 /plugin install redbox-relay@ccdwyer-mods
@@ -157,7 +157,7 @@ A `second_opinion` tool and a `/tribunal` command that send your diff to Codex a
 
 ![Inline Tribunal demo](https://github.com/ccdwyer/inline-tribunal/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/inline-tribunal/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/inline-tribunal/raw/main/media/02-pane.png) · [Repo](https://github.com/ccdwyer/inline-tribunal)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/inline-tribunal.mp4) · [Screenshot](https://github.com/ccdwyer/inline-tribunal/raw/main/media/02-pane.png) · [Repo](https://github.com/ccdwyer/inline-tribunal)
 
 ```
 /plugin install inline-tribunal@ccdwyer-mods
@@ -169,7 +169,7 @@ A departure board for `gh stack` stacked PRs (`/stack`), plus a guard that refus
 
 ![Stack Traffic Control demo](https://github.com/ccdwyer/stack-traffic-control/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/stack-traffic-control/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/stack-traffic-control/raw/main/media/02-board.png) · [Repo](https://github.com/ccdwyer/stack-traffic-control)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/stack-traffic-control.mp4) · [Screenshot](https://github.com/ccdwyer/stack-traffic-control/raw/main/media/02-board.png) · [Repo](https://github.com/ccdwyer/stack-traffic-control)
 
 ```
 /plugin install stack-traffic-control@ccdwyer-mods
@@ -183,7 +183,7 @@ A roguelike pane driven by your real session: context is HP, failing tests spawn
 
 ![Context Dungeon demo](https://github.com/ccdwyer/context-dungeon/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/context-dungeon/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/context-dungeon/raw/main/media/02-monster.png) · [Repo](https://github.com/ccdwyer/context-dungeon)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/context-dungeon.mp4) · [Screenshot](https://github.com/ccdwyer/context-dungeon/raw/main/media/02-monster.png) · [Repo](https://github.com/ccdwyer/context-dungeon)
 
 ```
 /plugin install context-dungeon@ccdwyer-mods
@@ -195,7 +195,7 @@ A LiveSplit-style timer above the prompt. It splits automatically from recon to 
 
 ![Speedrun Splits demo](https://github.com/ccdwyer/speedrun-splits/raw/main/media/demo.gif)
 
-[Watch the MP4](https://github.com/ccdwyer/speedrun-splits/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/speedrun-splits/raw/main/media/02-live-deltas.png) · [Repo](https://github.com/ccdwyer/speedrun-splits)
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/speedrun-splits.mp4) · [Screenshot](https://github.com/ccdwyer/speedrun-splits/raw/main/media/02-live-deltas.png) · [Repo](https://github.com/ccdwyer/speedrun-splits)
 
 ```
 /plugin install speedrun-splits@ccdwyer-mods
