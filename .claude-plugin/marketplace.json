@@ -119,6 +119,46 @@
         "repo": "ccdwyer/quarantine"
       },
       "description": "Wraps web, MCP and third-party tool output as untrusted data and defangs prompt-injection lines before the model reads them"
+    },
+    {
+      "name": "boot-sequence",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/boot-sequence"
+      },
+      "description": "A BIOS-style boot screen when a session starts: real checks of git, toolchains, devices, ports, context and disk, typed out and flipped to OK, WARN or FAIL"
+    },
+    {
+      "name": "diff-seismograph",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/diff-seismograph"
+      },
+      "description": "A live braille seismograph of every edit above the prompt, quake alerts for big changes, and a heat treemap of the repo"
+    },
+    {
+      "name": "departure-board",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/departure-board"
+      },
+      "description": "A Solari split-flap departure board for the agent's real work: tasks flip letter by letter in amber as they board, depart, get delayed or cancelled"
+    },
+    {
+      "name": "transit-map",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/transit-map"
+      },
+      "description": "Your git history as a Vignelli-style subway map: branches are coloured lines, commits are stations, merges are interchanges, and your working tree is a train on the current line"
+    },
+    {
+      "name": "fault-lacquer",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/fault-lacquer"
+      },
+      "description": "Kintsugi for your session: failed operations crack a lacquer tile, and the run that fixes them repairs it with animated gold seams"
     }
   ]
 }
