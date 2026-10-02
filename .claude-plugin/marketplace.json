@@ -79,6 +79,14 @@
         "repo": "ccdwyer/inline-tribunal"
       },
       "description": "A second_opinion tool and /tribunal command: your diff is reviewed by Codex and Grok side by side, read-only, inside the session"
+    },
+    {
+      "name": "speedrun-splits",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/speedrun-splits"
+      },
+      "description": "A LiveSplit-style timer above the prompt that auto-splits on recon, first edit, tests, green, commit and PR, with personal bests and gold segments"
     }
   ]
 }
