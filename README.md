@@ -1,22 +1,16 @@
 # ccdwyer-mods
 
-Claude Code mods: plugins of function hooks that change what Claude Code does and draw UI inside it. Each mod lives in its own repo; this repo is the marketplace that lists them all.
+Fourteen [Claude Code mods](https://claude.dev/blog/getting-started-with-claude-code-mods/): plugins of function hooks that change what Claude Code does and draw UI inside it. Each mod lives in its own repo; this repo is the marketplace that lists them all.
 
 ## Install
 
-All 14 mods, in one command (needs the `claude` CLI on your PATH):
+All of them (needs the `claude` CLI on your PATH):
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/ccdwyer/claude-mods/main/install.sh | sh
 ```
 
-Just the ones you want:
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/ccdwyer/claude-mods/main/install.sh | sh -s -- loop-breaker quarantine
-```
-
-Or from inside Claude Code:
+Or from inside Claude Code, add the marketplace once, then install whichever mods you want (commands are under each mod below):
 
 ```
 /plugin marketplace add ccdwyer/claude-mods
@@ -24,139 +18,189 @@ Or from inside Claude Code:
 /reload-plugins
 ```
 
-## Mods
+## Contents
 
-<!-- mods:start -->
-| Mod | What it does | Install |
-|---|---|---|
-| [review-ghost](https://github.com/ccdwyer/review-ghost) | Attaches a file's unresolved GitHub PR review threads to the model's Read and Edit results, so review comments get fixed in the file it is already touching | `/plugin install review-ghost@ccdwyer-mods` |
-| [assertion-guardian](https://github.com/ccdwyer/assertion-guardian) | Blocks edits that weaken tests to fake a green run: removed or loosened assertions, added skips, deleted cases, swallowed errors, snapshot rewrites | `/plugin install assertion-guardian@ccdwyer-mods` |
-| [budget-governor](https://github.com/ccdwyer/budget-governor) | Enforces session and daily spend caps: a live gauge above the prompt, a wrap-up nudge at 80%, and new prompts refused at the cap | `/plugin install budget-governor@ccdwyer-mods` |
-| [secret-sentry](https://github.com/ccdwyer/secret-sentry) | Two-way secret scrubbing: redacts credentials before the model sees them and blocks writing them into tracked files or shell commands | `/plugin install secret-sentry@ccdwyer-mods` |
-| [context-dungeon](https://github.com/ccdwyer/context-dungeon) | A roguelike pane played by your real session: context is HP, errors spawn monsters, green tests slay them, commits open chests, PRs are floor bosses | `/plugin install context-dungeon@ccdwyer-mods` |
-| [red-squiggle](https://github.com/ccdwyer/red-squiggle) | Type-checks and lints the file Claude just edited and puts the errors in that same tool result | `/plugin install red-squiggle@ccdwyer-mods` |
-| [dependency-bouncer](https://github.com/ccdwyer/dependency-bouncer) | Vets npm and PyPI packages before they install: blocks hallucinated, typosquatted and brand-new install-script packages, flags risky ones | `/plugin install dependency-bouncer@ccdwyer-mods` |
-| [loop-breaker](https://github.com/ccdwyer/loop-breaker) | Stops the agent repeating the same failing command or undoing its own edits, and shows a stuck meter above the prompt | `/plugin install loop-breaker@ccdwyer-mods` |
-| [inline-tribunal](https://github.com/ccdwyer/inline-tribunal) | A second_opinion tool and /tribunal command: your diff is reviewed by Codex and Grok side by side, read-only, inside the session | `/plugin install inline-tribunal@ccdwyer-mods` |
-| [speedrun-splits](https://github.com/ccdwyer/speedrun-splits) | A LiveSplit-style timer above the prompt that auto-splits on recon, first edit, tests, green, commit and PR, with personal bests and gold segments | `/plugin install speedrun-splits@ccdwyer-mods` |
-| [stack-traffic-control](https://github.com/ccdwyer/stack-traffic-control) | A departure board for gh stack: live stack pane, a one-line status above the prompt, and raw force-pushes, rebases and PR base edits on stacked branches redirected to gh stack | `/plugin install stack-traffic-control@ccdwyer-mods` |
-| [redbox-relay](https://github.com/ccdwyer/redbox-relay) | Attaches fresh React Native redboxes and native crash logs from running simulators and emulators to your prompt, and warns when an edit needs a native rebuild | `/plugin install redbox-relay@ccdwyer-mods` |
-| [proof-decay](https://github.com/ccdwyer/proof-decay) | Tracks which test, typecheck, lint and build results are still true after later edits, and stops commit messages that claim checks which are stale | `/plugin install proof-decay@ccdwyer-mods` |
-| [quarantine](https://github.com/ccdwyer/quarantine) | Wraps web, MCP and third-party tool output as untrusted data and defangs prompt-injection lines before the model reads them | `/plugin install quarantine@ccdwyer-mods` |
-<!-- mods:end -->
+- **Guardrails:** [Loop Breaker](#loop-breaker) · [Assertion Guardian](#assertion-guardian) · [Secret Sentry](#secret-sentry) · [Dependency Bouncer](#dependency-bouncer) · [Quarantine](#quarantine) · [Budget Governor](#budget-governor)
+- **Feedback loops:** [Red Squiggle](#red-squiggle) · [Proof Decay](#proof-decay) · [Review Ghost](#review-ghost) · [Redbox Relay](#redbox-relay)
+- **Workflow:** [Inline Tribunal](#inline-tribunal) · [Stack Traffic Control](#stack-traffic-control)
+- **Fun:** [Context Dungeon](#context-dungeon) · [Speedrun Splits](#speedrun-splits)
 
-## Demos
+## Guardrails
 
-### [Loop Breaker](https://github.com/ccdwyer/loop-breaker)
+### Loop Breaker
 
-Stops the agent repeating the same failing command or undoing its own edits, and shows a stuck meter above the prompt.
+Notices when the agent keeps running the same failing command or flips an edit back and forth, refuses the next identical try, and shows a stuck meter above the prompt. A real code change or a different error resets it, so normal fix-and-retest work is never blocked.
 
 ![Loop Breaker demo](https://github.com/ccdwyer/loop-breaker/raw/main/media/demo.gif)
 
-`/plugin install loop-breaker@ccdwyer-mods`
+[Watch the MP4](https://github.com/ccdwyer/loop-breaker/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/loop-breaker/raw/main/media/03-refused.png) · [Repo](https://github.com/ccdwyer/loop-breaker)
 
-### [Red Squiggle](https://github.com/ccdwyer/red-squiggle)
+```
+/plugin install loop-breaker@ccdwyer-mods
+```
 
-Type-checks and lints the file Claude just edited and puts the errors in that same tool result.
+### Assertion Guardian
 
-![Red Squiggle demo](https://github.com/ccdwyer/red-squiggle/raw/main/media/demo.gif)
-
-`/plugin install red-squiggle@ccdwyer-mods`
-
-### [Review Ghost](https://github.com/ccdwyer/review-ghost)
-
-Attaches a file's unresolved GitHub PR review threads to the model's Read and Edit results, so review comments get fixed in the file it is already touching.
-
-![Review Ghost demo](https://github.com/ccdwyer/review-ghost/raw/main/media/demo.gif)
-
-`/plugin install review-ghost@ccdwyer-mods`
-
-### [Secret Sentry](https://github.com/ccdwyer/secret-sentry)
-
-Two-way secret scrubbing: redacts credentials before the model sees them and blocks writing them into tracked files or shell commands.
-
-![Secret Sentry demo](https://github.com/ccdwyer/secret-sentry/raw/main/media/demo.gif)
-
-`/plugin install secret-sentry@ccdwyer-mods`
-
-### [Assertion Guardian](https://github.com/ccdwyer/assertion-guardian)
-
-Blocks edits that weaken tests to fake a green run: removed or loosened assertions, added skips, deleted cases, swallowed errors, snapshot rewrites.
+Refuses edits that weaken tests to fake a green run: changed expected values, looser matchers, deleted assertions, `.skip`/`.only`, swallowed failures, bulk snapshot updates. You can allow a specific change once.
 
 ![Assertion Guardian demo](https://github.com/ccdwyer/assertion-guardian/raw/main/media/demo.gif)
 
-`/plugin install assertion-guardian@ccdwyer-mods`
+[Watch the MP4](https://github.com/ccdwyer/assertion-guardian/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/assertion-guardian/raw/main/media/02-refused.png) · [Repo](https://github.com/ccdwyer/assertion-guardian)
 
-### [Redbox Relay](https://github.com/ccdwyer/redbox-relay)
+```
+/plugin install assertion-guardian@ccdwyer-mods
+```
 
-Attaches fresh React Native redboxes and native crash logs from running simulators and emulators to your prompt, and warns when an edit needs a native rebuild.
+### Secret Sentry
 
-![Redbox Relay demo](https://github.com/ccdwyer/redbox-relay/raw/main/media/demo.gif)
+Redacts credentials in prompts and tool output before the model sees them, and refuses writes or shell commands that would put a key into a tracked file.
 
-`/plugin install redbox-relay@ccdwyer-mods`
+![Secret Sentry demo](https://github.com/ccdwyer/secret-sentry/raw/main/media/demo.gif)
 
-### [Stack Traffic Control](https://github.com/ccdwyer/stack-traffic-control)
+[Watch the MP4](https://github.com/ccdwyer/secret-sentry/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/secret-sentry/raw/main/media/02-write-refused.png) · [Repo](https://github.com/ccdwyer/secret-sentry)
 
-A departure board for gh stack: live stack pane, a one-line status above the prompt, and raw force-pushes, rebases and PR base edits on stacked branches redirected to gh stack.
+```
+/plugin install secret-sentry@ccdwyer-mods
+```
 
-![Stack Traffic Control demo](https://github.com/ccdwyer/stack-traffic-control/raw/main/media/demo.gif)
+### Dependency Bouncer
 
-`/plugin install stack-traffic-control@ccdwyer-mods`
-
-### [Inline Tribunal](https://github.com/ccdwyer/inline-tribunal)
-
-A second_opinion tool and /tribunal command: your diff is reviewed by Codex and Grok side by side, read-only, inside the session.
-
-![Inline Tribunal demo](https://github.com/ccdwyer/inline-tribunal/raw/main/media/demo.gif)
-
-`/plugin install inline-tribunal@ccdwyer-mods`
-
-### [Budget Governor](https://github.com/ccdwyer/budget-governor)
-
-Enforces session and daily spend caps: a live gauge above the prompt, a wrap-up nudge at 80%, and new prompts refused at the cap.
-
-![Budget Governor demo](https://github.com/ccdwyer/budget-governor/raw/main/media/demo.gif)
-
-`/plugin install budget-governor@ccdwyer-mods`
-
-### [Proof Decay](https://github.com/ccdwyer/proof-decay)
-
-Tracks which test, typecheck, lint and build results are still true after later edits, and stops commit messages that claim checks which are stale.
-
-![Proof Decay demo](https://github.com/ccdwyer/proof-decay/raw/main/media/demo.gif)
-
-`/plugin install proof-decay@ccdwyer-mods`
-
-### [Dependency Bouncer](https://github.com/ccdwyer/dependency-bouncer)
-
-Vets npm and PyPI packages before they install: blocks hallucinated, typosquatted and brand-new install-script packages, flags risky ones.
+Checks packages against the npm and PyPI registries before they install. It blocks made-up names, typosquats and brand-new packages with install scripts, and flags dependencies you already have something for.
 
 ![Dependency Bouncer demo](https://github.com/ccdwyer/dependency-bouncer/raw/main/media/demo.gif)
 
-`/plugin install dependency-bouncer@ccdwyer-mods`
+[Watch the MP4](https://github.com/ccdwyer/dependency-bouncer/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/dependency-bouncer/raw/main/media/02-blocked.png) · [Repo](https://github.com/ccdwyer/dependency-bouncer)
 
-### [Context Dungeon](https://github.com/ccdwyer/context-dungeon)
+```
+/plugin install dependency-bouncer@ccdwyer-mods
+```
 
-A roguelike pane played by your real session: context is HP, errors spawn monsters, green tests slay them, commits open chests, PRs are floor bosses.
+### Quarantine
 
-![Context Dungeon demo](https://github.com/ccdwyer/context-dungeon/raw/main/media/demo.gif)
-
-`/plugin install context-dungeon@ccdwyer-mods`
-
-### [Speedrun Splits](https://github.com/ccdwyer/speedrun-splits)
-
-A LiveSplit-style timer above the prompt that auto-splits on recon, first edit, tests, green, commit and PR, with personal bests and gold segments.
-
-![Speedrun Splits demo](https://github.com/ccdwyer/speedrun-splits/raw/main/media/demo.gif)
-
-`/plugin install speedrun-splits@ccdwyer-mods`
-
-### [Quarantine](https://github.com/ccdwyer/quarantine)
-
-Wraps web, MCP and third-party tool output as untrusted data and defangs prompt-injection lines before the model reads them.
+Wraps untrusted tool output (web pages, MCP results, vendored files, fetched PR and issue text) in an "untrusted content" fence and defangs lines that read like instructions, so prompt injections arrive as data.
 
 ![Quarantine demo](https://github.com/ccdwyer/quarantine/raw/main/media/demo.gif)
 
-`/plugin install quarantine@ccdwyer-mods`
+[Watch the MP4](https://github.com/ccdwyer/quarantine/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/quarantine/raw/main/media/02-defanged.png) · [Repo](https://github.com/ccdwyer/quarantine)
 
-Every mod is validated, type-checked, and tested with `claude plugin test`, and was reviewed by GPT-6-Astra and Grok 4.7 before release.
+```
+/plugin install quarantine@ccdwyer-mods
+```
+
+### Budget Governor
+
+Enforces session and daily spend caps. It shows a gauge above the prompt, tells the model to wrap up at 80%, and refuses new prompts at the cap until you raise it.
+
+![Budget Governor demo](https://github.com/ccdwyer/budget-governor/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/budget-governor/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/budget-governor/raw/main/media/03-refused.png) · [Repo](https://github.com/ccdwyer/budget-governor)
+
+```
+/plugin install budget-governor@ccdwyer-mods
+```
+
+## Feedback loops
+
+### Red Squiggle
+
+Runs your project's own tsc, eslint and ruff right after each edit and attaches only the new errors to that edit's result, so the model fixes them on the same step.
+
+![Red Squiggle demo](https://github.com/ccdwyer/red-squiggle/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/red-squiggle/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/red-squiggle/raw/main/media/02-diagnostics.png) · [Repo](https://github.com/ccdwyer/red-squiggle)
+
+```
+/plugin install red-squiggle@ccdwyer-mods
+```
+
+### Proof Decay
+
+Tracks whether "tests passed" is still true. Later edits turn results stale on a board above the prompt, and Oathkeeper refuses commit messages that claim checks pass when they aren't current.
+
+![Proof Decay demo](https://github.com/ccdwyer/proof-decay/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/proof-decay/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/proof-decay/raw/main/media/02-stale.png) · [Repo](https://github.com/ccdwyer/proof-decay)
+
+```
+/plugin install proof-decay@ccdwyer-mods
+```
+
+### Review Ghost
+
+When the agent reads or edits a file on a branch with an open PR, it attaches that file's unresolved GitHub review threads. `/ghost` lists them all.
+
+![Review Ghost demo](https://github.com/ccdwyer/review-ghost/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/review-ghost/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/review-ghost/raw/main/media/02-threads-attached.png) · [Repo](https://github.com/ccdwyer/review-ghost)
+
+```
+/plugin install review-ghost@ccdwyer-mods
+```
+
+### Redbox Relay
+
+For React Native: attaches fresh simulator and emulator errors to your next prompt, and warns when an edit to native code needs `pod install` and a native rebuild.
+
+![Redbox Relay demo](https://github.com/ccdwyer/redbox-relay/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/redbox-relay/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/redbox-relay/raw/main/media/02-rebuild-warning.png) · [Repo](https://github.com/ccdwyer/redbox-relay)
+
+```
+/plugin install redbox-relay@ccdwyer-mods
+```
+
+## Workflow
+
+### Inline Tribunal
+
+A `second_opinion` tool and a `/tribunal` command that send your diff to Codex and Grok in locked-down, read-only sandboxes and show both verdicts side by side.
+
+![Inline Tribunal demo](https://github.com/ccdwyer/inline-tribunal/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/inline-tribunal/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/inline-tribunal/raw/main/media/02-pane.png) · [Repo](https://github.com/ccdwyer/inline-tribunal)
+
+```
+/plugin install inline-tribunal@ccdwyer-mods
+```
+
+### Stack Traffic Control
+
+A departure board for `gh stack` stacked PRs (`/stack`), plus a guard that refuses force-pushes, rebases and PR base changes on stacked branches and points to the right `gh stack` command.
+
+![Stack Traffic Control demo](https://github.com/ccdwyer/stack-traffic-control/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/stack-traffic-control/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/stack-traffic-control/raw/main/media/02-board.png) · [Repo](https://github.com/ccdwyer/stack-traffic-control)
+
+```
+/plugin install stack-traffic-control@ccdwyer-mods
+```
+
+## Fun
+
+### Context Dungeon
+
+A roguelike pane driven by your real session: context is HP, failing tests spawn monsters named after the error, green runs land the killing blow, and commits open treasure chests.
+
+![Context Dungeon demo](https://github.com/ccdwyer/context-dungeon/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/context-dungeon/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/context-dungeon/raw/main/media/02-monster.png) · [Repo](https://github.com/ccdwyer/context-dungeon)
+
+```
+/plugin install context-dungeon@ccdwyer-mods
+```
+
+### Speedrun Splits
+
+A LiveSplit-style timer above the prompt. It splits automatically from recon to first edit to test to green to commit or PR, and keeps personal bests and gold segments for each repo.
+
+![Speedrun Splits demo](https://github.com/ccdwyer/speedrun-splits/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/speedrun-splits/raw/main/media/demo.mp4) · [Screenshot](https://github.com/ccdwyer/speedrun-splits/raw/main/media/02-live-deltas.png) · [Repo](https://github.com/ccdwyer/speedrun-splits)
+
+```
+/plugin install speedrun-splits@ccdwyer-mods
+```
+
+---
+
+Every mod is validated, type-checked and tested with `claude plugin test`, and went through several review rounds with GPT-6-Astra and Grok 4.7. Each repo's README lists what it does not cover.
