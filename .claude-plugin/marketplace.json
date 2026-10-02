@@ -55,6 +55,14 @@
         "repo": "ccdwyer/secret-sentry"
       },
       "description": "Two-way secret scrubbing: redacts credentials before the model sees them and blocks writing them into tracked files or shell commands"
+    },
+    {
+      "name": "context-dungeon",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/context-dungeon"
+      },
+      "description": "A roguelike pane played by your real session: context is HP, errors spawn monsters, green tests slay them, commits open chests, PRs are floor bosses"
     }
   ]
 }

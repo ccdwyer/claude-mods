@@ -21,6 +21,7 @@ Claude Code mods: plugins of function hooks that change what Claude Code does an
 | [assertion-guardian](https://github.com/ccdwyer/assertion-guardian) | Blocks edits that weaken tests to fake a green run: removed or loosened assertions, added skips, deleted cases, swallowed errors, snapshot rewrites | `/plugin install assertion-guardian@ccdwyer-mods` |
 | [budget-governor](https://github.com/ccdwyer/budget-governor) | Enforces session and daily spend caps: a live gauge above the prompt, a wrap-up nudge at 80%, and new prompts refused at the cap | `/plugin install budget-governor@ccdwyer-mods` |
 | [secret-sentry](https://github.com/ccdwyer/secret-sentry) | Two-way secret scrubbing: redacts credentials before the model sees them and blocks writing them into tracked files or shell commands | `/plugin install secret-sentry@ccdwyer-mods` |
+| [context-dungeon](https://github.com/ccdwyer/context-dungeon) | A roguelike pane played by your real session: context is HP, errors spawn monsters, green tests slay them, commits open chests, PRs are floor bosses | `/plugin install context-dungeon@ccdwyer-mods` |
 <!-- mods:end -->
 
 Every mod is validated, type-checked, and tested with `claude plugin test`, and was reviewed by GPT-6-Astra and Grok 4.7 before release.
