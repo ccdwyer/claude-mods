@@ -103,6 +103,14 @@
         "repo": "ccdwyer/redbox-relay"
       },
       "description": "Attaches fresh React Native redboxes and native crash logs from running simulators and emulators to your prompt, and warns when an edit needs a native rebuild"
+    },
+    {
+      "name": "proof-decay",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/proof-decay"
+      },
+      "description": "Tracks which test, typecheck, lint and build results are still true after later edits, and stops commit messages that claim checks which are stale"
     }
   ]
 }
