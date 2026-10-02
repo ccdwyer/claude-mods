@@ -87,6 +87,14 @@
         "repo": "ccdwyer/speedrun-splits"
       },
       "description": "A LiveSplit-style timer above the prompt that auto-splits on recon, first edit, tests, green, commit and PR, with personal bests and gold segments"
+    },
+    {
+      "name": "stack-traffic-control",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/stack-traffic-control"
+      },
+      "description": "A departure board for gh stack: live stack pane, a one-line status above the prompt, and raw force-pushes, rebases and PR base edits on stacked branches redirected to gh stack"
     }
   ]
 }
