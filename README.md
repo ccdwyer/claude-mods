@@ -192,7 +192,9 @@ A departure board for `gh stack` stacked PRs (`/stack`), plus a guard that refus
 
 `/hud` opens a cyberpunk dashboard at 30fps: a radial context gauge, a token-rate oscilloscope, a tool-call waterfall, and live process, git and test widgets.
 
-*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/netrunner-hud)
+![Netrunner HUD demo](https://github.com/ccdwyer/netrunner-hud/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/netrunner-hud.mp4) · [Repo](https://github.com/ccdwyer/netrunner-hud)
 
 ```
 /plugin install netrunner-hud@ccdwyer-mods
@@ -222,7 +224,9 @@ Every outbound action (curl, gh, npm, git push, WebFetch, MCP) flies as a packet
 
 A BIOS-style POST screen when a session starts that runs real checks (git, toolchains, simulators, dev-server ports, disk, context) and types each one out as `[ OK ]`, `[WARN]` or `[FAIL]`. `/boot` replays it.
 
-*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/boot-sequence)
+![Boot Sequence demo](https://github.com/ccdwyer/boot-sequence/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/boot-sequence.mp4) · [Repo](https://github.com/ccdwyer/boot-sequence)
 
 ```
 /plugin install boot-sequence@ccdwyer-mods
@@ -232,7 +236,9 @@ A BIOS-style POST screen when a session starts that runs real checks (git, toolc
 
 A live braille seismograph of lines added and removed above the prompt, with `QUAKE M5.2` alerts on big edits. `/quake` adds a heat treemap of the repo, glowing where this session changed code.
 
-*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/diff-seismograph)
+![Diff Seismograph demo](https://github.com/ccdwyer/diff-seismograph/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/diff-seismograph.mp4) · [Repo](https://github.com/ccdwyer/diff-seismograph)
 
 ```
 /plugin install diff-seismograph@ccdwyer-mods
@@ -242,7 +248,9 @@ A live braille seismograph of lines added and removed above the prompt, with `QU
 
 A Solari split-flap board in amber that cascades flap by flap as Claude's tasks go from BOARDING to DEPARTED, DELAYED or CANCELLED. A mini board sits above the prompt and `/board` opens it fullscreen.
 
-*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/departure-board)
+![Departure Board demo](https://github.com/ccdwyer/departure-board/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/departure-board.mp4) · [Repo](https://github.com/ccdwyer/departure-board)
 
 ```
 /plugin install departure-board@ccdwyer-mods
@@ -252,7 +260,9 @@ A Solari split-flap board in amber that cascades flap by flap as Claude's tasks 
 
 `/metro` shows your git history as a Vignelli subway map: branches are coloured lines, commits are stations, merges are interchanges, and your working tree is a train with one car per uncommitted file.
 
-*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/transit-map)
+![Transit Map demo](https://github.com/ccdwyer/transit-map/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/transit-map.mp4) · [Repo](https://github.com/ccdwyer/transit-map)
 
 ```
 /plugin install transit-map@ccdwyer-mods
@@ -262,7 +272,9 @@ A Solari split-flap board in amber that cascades flap by flap as Claude's tasks 
 
 Kintsugi for your session: each failing operation cracks its lacquer tile, and when it later succeeds the cracks fill with animated gold seams. `/kintsugi` shows the wall.
 
-*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/fault-lacquer)
+![Fault Lacquer demo](https://github.com/ccdwyer/fault-lacquer/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/fault-lacquer.mp4) · [Repo](https://github.com/ccdwyer/fault-lacquer)
 
 ```
 /plugin install fault-lacquer@ccdwyer-mods
