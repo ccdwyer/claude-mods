@@ -95,6 +95,14 @@
         "repo": "ccdwyer/stack-traffic-control"
       },
       "description": "A departure board for gh stack: live stack pane, a one-line status above the prompt, and raw force-pushes, rebases and PR base edits on stacked branches redirected to gh stack"
+    },
+    {
+      "name": "redbox-relay",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/redbox-relay"
+      },
+      "description": "Attaches fresh React Native redboxes and native crash logs from running simulators and emulators to your prompt, and warns when an edit needs a native rebuild"
     }
   ]
 }

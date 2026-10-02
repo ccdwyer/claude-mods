@@ -26,6 +26,7 @@ Claude Code mods: plugins of function hooks that change what Claude Code does an
 | [inline-tribunal](https://github.com/ccdwyer/inline-tribunal) | A second_opinion tool and /tribunal command: your diff is reviewed by Codex and Grok side by side, read-only, inside the session | `/plugin install inline-tribunal@ccdwyer-mods` |
 | [speedrun-splits](https://github.com/ccdwyer/speedrun-splits) | A LiveSplit-style timer above the prompt that auto-splits on recon, first edit, tests, green, commit and PR, with personal bests and gold segments | `/plugin install speedrun-splits@ccdwyer-mods` |
 | [stack-traffic-control](https://github.com/ccdwyer/stack-traffic-control) | A departure board for gh stack: live stack pane, a one-line status above the prompt, and raw force-pushes, rebases and PR base edits on stacked branches redirected to gh stack | `/plugin install stack-traffic-control@ccdwyer-mods` |
+| [redbox-relay](https://github.com/ccdwyer/redbox-relay) | Attaches fresh React Native redboxes and native crash logs from running simulators and emulators to your prompt, and warns when an edit needs a native rebuild | `/plugin install redbox-relay@ccdwyer-mods` |
 <!-- mods:end -->
 
 Every mod is validated, type-checked, and tested with `claude plugin test`, and was reviewed by GPT-6-Astra and Grok 4.7 before release.
