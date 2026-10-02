@@ -22,6 +22,7 @@ Claude Code mods: plugins of function hooks that change what Claude Code does an
 | [secret-sentry](https://github.com/ccdwyer/secret-sentry) | Two-way secret scrubbing: redacts credentials before the model sees them and blocks writing them into tracked files or shell commands | `/plugin install secret-sentry@ccdwyer-mods` |
 | [context-dungeon](https://github.com/ccdwyer/context-dungeon) | A roguelike pane played by your real session: context is HP, errors spawn monsters, green tests slay them, commits open chests, PRs are floor bosses | `/plugin install context-dungeon@ccdwyer-mods` |
 | [red-squiggle](https://github.com/ccdwyer/red-squiggle) | Type-checks and lints the file Claude just edited and puts the errors in that same tool result | `/plugin install red-squiggle@ccdwyer-mods` |
+| [dependency-bouncer](https://github.com/ccdwyer/dependency-bouncer) | Vets npm and PyPI packages before they install: blocks hallucinated, typosquatted and brand-new install-script packages, flags risky ones | `/plugin install dependency-bouncer@ccdwyer-mods` |
 <!-- mods:end -->
 
 Every mod is validated, type-checked, and tested with `claude plugin test`, and was reviewed by GPT-6-Astra and Grok 4.7 before release.
