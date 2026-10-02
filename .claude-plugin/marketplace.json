@@ -159,6 +159,38 @@
         "repo": "ccdwyer/fault-lacquer"
       },
       "description": "Kintsugi for your session: failed operations crack a lacquer tile, and the run that fixes them repairs it with animated gold seams"
+    },
+    {
+      "name": "netrunner-hud",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/netrunner-hud"
+      },
+      "description": "A cyberpunk dashboard pane for your session: braille context gauge, live token oscilloscope, tool-call waterfall and git/test/job/cost widgets, animated at 30fps"
+    },
+    {
+      "name": "mirror-pane",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/mirror-pane"
+      },
+      "description": "Before/after simulator screenshots on the same step as a UI edit, side by side in a pane, with a changed-pixel percentage and pinned baselines"
+    },
+    {
+      "name": "codebase-galaxy",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/codebase-galaxy"
+      },
+      "description": "Your repo as a live force-directed starfield in braille: files are stars, imports are faint links, and Claude's attention is a comet that flies to every file it reads or edits"
+    },
+    {
+      "name": "netrunner-trace",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/netrunner-trace"
+      },
+      "description": "A live node map of every host your agent reaches: packets fly from your machine to github.com, npm, PyPI, MCP servers and unknown hosts, with a log and first-contact alerts"
     }
   ]
 }

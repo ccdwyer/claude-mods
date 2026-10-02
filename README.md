@@ -1,6 +1,6 @@
 # ccdwyer-mods
 
-19 [Claude Code mods](https://claude.dev/blog/getting-started-with-claude-code-mods/): plugins of function hooks that change what Claude Code does and draw UI inside it. Each mod lives in its own repo; this repo is the marketplace that lists them all.
+23 [Claude Code mods](https://claude.dev/blog/getting-started-with-claude-code-mods/): plugins of function hooks that change what Claude Code does and draw UI inside it. Each mod lives in its own repo; this repo is the marketplace that lists them all.
 
 ## Install
 
@@ -21,9 +21,9 @@ Or from inside Claude Code, add the marketplace once, then install whichever mod
 ## Contents
 
 - **Guardrails:** [Loop Breaker](#loop-breaker) · [Assertion Guardian](#assertion-guardian) · [Secret Sentry](#secret-sentry) · [Dependency Bouncer](#dependency-bouncer) · [Quarantine](#quarantine) · [Budget Governor](#budget-governor)
-- **Feedback loops:** [Red Squiggle](#red-squiggle) · [Proof Decay](#proof-decay) · [Review Ghost](#review-ghost) · [Redbox Relay](#redbox-relay)
+- **Feedback loops:** [Red Squiggle](#red-squiggle) · [Proof Decay](#proof-decay) · [Review Ghost](#review-ghost) · [Redbox Relay](#redbox-relay) · [Mirror Pane](#mirror-pane)
 - **Workflow:** [Inline Tribunal](#inline-tribunal) · [Stack Traffic Control](#stack-traffic-control)
-- **Visuals:** [Boot Sequence](#boot-sequence) · [Diff Seismograph](#diff-seismograph) · [Departure Board](#departure-board) · [Transit Map](#transit-map) · [Fault Lacquer](#fault-lacquer)
+- **Visuals:** [Netrunner HUD](#netrunner-hud) · [Codebase Galaxy](#codebase-galaxy) · [Netrunner Trace](#netrunner-trace) · [Boot Sequence](#boot-sequence) · [Diff Seismograph](#diff-seismograph) · [Departure Board](#departure-board) · [Transit Map](#transit-map) · [Fault Lacquer](#fault-lacquer)
 - **Fun:** [Context Dungeon](#context-dungeon) · [Speedrun Splits](#speedrun-splits)
 
 ## Guardrails
@@ -150,6 +150,16 @@ For React Native: attaches fresh simulator and emulator errors to your next prom
 /plugin install redbox-relay@ccdwyer-mods
 ```
 
+### Mirror Pane
+
+After a UI edit, captures the simulator or emulator screen before and after hot reload and shows them side by side in a pane, with the percentage of pixels that changed. It never guesses between booted devices.
+
+*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/mirror-pane)
+
+```
+/plugin install mirror-pane@ccdwyer-mods
+```
+
 ## Workflow
 
 ### Inline Tribunal
@@ -177,6 +187,36 @@ A departure board for `gh stack` stacked PRs (`/stack`), plus a guard that refus
 ```
 
 ## Visuals
+
+### Netrunner HUD
+
+`/hud` opens a cyberpunk dashboard at 30fps: a radial context gauge, a token-rate oscilloscope, a tool-call waterfall, and live process, git and test widgets.
+
+*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/netrunner-hud)
+
+```
+/plugin install netrunner-hud@ccdwyer-mods
+```
+
+### Codebase Galaxy
+
+`/galaxy` draws your repo as a braille starfield: files are stars, imports are faint edges, and Claude's attention is a comet with a fading trail. Pan, zoom and click stars.
+
+*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/codebase-galaxy)
+
+```
+/plugin install codebase-galaxy@ccdwyer-mods
+```
+
+### Netrunner Trace
+
+Every outbound action (curl, gh, npm, git push, WebFetch, MCP) flies as a packet from your machine to a ring of hosts. First-contact hosts flash amber and unexpected ones glow red, so you get a real security view.
+
+*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/netrunner-trace)
+
+```
+/plugin install netrunner-trace@ccdwyer-mods
+```
 
 ### Boot Sequence
 
