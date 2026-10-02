@@ -17,14 +17,6 @@
       "description": "Stops the agent repeating the same failing command or undoing its own edits, and shows a stuck meter above the prompt"
     },
     {
-      "name": "red-squiggle",
-      "source": {
-        "source": "github",
-        "repo": "ccdwyer/red-squiggle"
-      },
-      "description": "Type-checks and lints the file Claude just edited and puts the errors in that same tool result"
-    },
-    {
       "name": "review-ghost",
       "source": {
         "source": "github",
@@ -63,6 +55,14 @@
         "repo": "ccdwyer/context-dungeon"
       },
       "description": "A roguelike pane played by your real session: context is HP, errors spawn monsters, green tests slay them, commits open chests, PRs are floor bosses"
+    },
+    {
+      "name": "red-squiggle",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/red-squiggle"
+      },
+      "description": "Type-checks and lints the file Claude just edited and puts the errors in that same tool result"
     }
   ]
 }
