@@ -4,6 +4,20 @@ Claude Code mods: plugins of function hooks that change what Claude Code does an
 
 ## Install
 
+All 14 mods, in one command (needs the `claude` CLI on your PATH):
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/ccdwyer/claude-mods/main/install.sh | sh
+```
+
+Just the ones you want:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/ccdwyer/claude-mods/main/install.sh | sh -s -- loop-breaker quarantine
+```
+
+Or from inside Claude Code:
+
 ```
 /plugin marketplace add ccdwyer/claude-mods
 /plugin install <mod>@ccdwyer-mods

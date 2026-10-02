@@ -19,3 +19,11 @@ start, end = '<!-- mods:start -->', '<!-- mods:end -->'
 head, rest = readme.split(start)
 _, tail = rest.split(end)
 open('README.md', 'w').write(head + start + '\n' + '\n'.join(rows) + '\n' + end + tail)
+
+# Keep install.sh's mod list in sync.
+import re as _re
+names=' '.join(p['name'] for p in market['plugins'])
+sh=open('install.sh').read()
+sh=_re.sub(r'^MODS=".*"$', f'MODS="{names}"', sh, flags=_re.M)
+sh=_re.sub(r'case " .* " in', f'case " {names} " in', sh)
+open('install.sh','w').write(sh)
