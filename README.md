@@ -204,7 +204,9 @@ A departure board for `gh stack` stacked PRs (`/stack`), plus a guard that refus
 
 `/galaxy` draws your repo as a braille starfield: files are stars, imports are faint edges, and Claude's attention is a comet with a fading trail. Pan, zoom and click stars.
 
-*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/codebase-galaxy)
+![Codebase Galaxy demo](https://github.com/ccdwyer/codebase-galaxy/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/codebase-galaxy.mp4) · [Repo](https://github.com/ccdwyer/codebase-galaxy)
 
 ```
 /plugin install codebase-galaxy@ccdwyer-mods
@@ -214,7 +216,9 @@ A departure board for `gh stack` stacked PRs (`/stack`), plus a guard that refus
 
 Every outbound action (curl, gh, npm, git push, WebFetch, MCP) flies as a packet from your machine to a ring of hosts. First-contact hosts flash amber and unexpected ones glow red, so you get a real security view.
 
-*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/netrunner-trace)
+![Netrunner Trace demo](https://github.com/ccdwyer/netrunner-trace/raw/main/media/demo.gif)
+
+[Watch the MP4](https://github.com/ccdwyer/claude-mods/raw/main/media/netrunner-trace.mp4) · [Repo](https://github.com/ccdwyer/netrunner-trace)
 
 ```
 /plugin install netrunner-trace@ccdwyer-mods
