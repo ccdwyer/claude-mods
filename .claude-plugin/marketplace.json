@@ -111,6 +111,14 @@
         "repo": "ccdwyer/proof-decay"
       },
       "description": "Tracks which test, typecheck, lint and build results are still true after later edits, and stops commit messages that claim checks which are stale"
+    },
+    {
+      "name": "quarantine",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/quarantine"
+      },
+      "description": "Wraps web, MCP and third-party tool output as untrusted data and defangs prompt-injection lines before the model reads them"
     }
   ]
 }

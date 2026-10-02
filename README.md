@@ -28,6 +28,7 @@ Claude Code mods: plugins of function hooks that change what Claude Code does an
 | [stack-traffic-control](https://github.com/ccdwyer/stack-traffic-control) | A departure board for gh stack: live stack pane, a one-line status above the prompt, and raw force-pushes, rebases and PR base edits on stacked branches redirected to gh stack | `/plugin install stack-traffic-control@ccdwyer-mods` |
 | [redbox-relay](https://github.com/ccdwyer/redbox-relay) | Attaches fresh React Native redboxes and native crash logs from running simulators and emulators to your prompt, and warns when an edit needs a native rebuild | `/plugin install redbox-relay@ccdwyer-mods` |
 | [proof-decay](https://github.com/ccdwyer/proof-decay) | Tracks which test, typecheck, lint and build results are still true after later edits, and stops commit messages that claim checks which are stale | `/plugin install proof-decay@ccdwyer-mods` |
+| [quarantine](https://github.com/ccdwyer/quarantine) | Wraps web, MCP and third-party tool output as untrusted data and defangs prompt-injection lines before the model reads them | `/plugin install quarantine@ccdwyer-mods` |
 <!-- mods:end -->
 
 Every mod is validated, type-checked, and tested with `claude plugin test`, and was reviewed by GPT-6-Astra and Grok 4.7 before release.
