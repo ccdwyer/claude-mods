@@ -1,0 +1,20 @@
+{
+  "name": "ccdwyer-mods",
+  "owner": {
+    "name": "Chris Dwyer",
+    "url": "https://github.com/ccdwyer"
+  },
+  "metadata": {
+    "description": "Claude Code mods by ccdwyer: guardrails, feedback loops and toys built on function hooks"
+  },
+  "plugins": [
+    {
+      "name": "loop-breaker",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/loop-breaker"
+      },
+      "description": "Stops the agent repeating the same failing command or undoing its own edits, and shows a stuck meter above the prompt"
+    }
+  ]
+}
