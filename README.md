@@ -23,6 +23,7 @@ Claude Code mods: plugins of function hooks that change what Claude Code does an
 | [red-squiggle](https://github.com/ccdwyer/red-squiggle) | Type-checks and lints the file Claude just edited and puts the errors in that same tool result | `/plugin install red-squiggle@ccdwyer-mods` |
 | [dependency-bouncer](https://github.com/ccdwyer/dependency-bouncer) | Vets npm and PyPI packages before they install: blocks hallucinated, typosquatted and brand-new install-script packages, flags risky ones | `/plugin install dependency-bouncer@ccdwyer-mods` |
 | [loop-breaker](https://github.com/ccdwyer/loop-breaker) | Stops the agent repeating the same failing command or undoing its own edits, and shows a stuck meter above the prompt | `/plugin install loop-breaker@ccdwyer-mods` |
+| [inline-tribunal](https://github.com/ccdwyer/inline-tribunal) | A second_opinion tool and /tribunal command: your diff is reviewed by Codex and Grok side by side, read-only, inside the session | `/plugin install inline-tribunal@ccdwyer-mods` |
 <!-- mods:end -->
 
 Every mod is validated, type-checked, and tested with `claude plugin test`, and was reviewed by GPT-6-Astra and Grok 4.7 before release.

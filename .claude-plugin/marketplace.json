@@ -71,6 +71,14 @@
         "repo": "ccdwyer/loop-breaker"
       },
       "description": "Stops the agent repeating the same failing command or undoing its own edits, and shows a stuck meter above the prompt"
+    },
+    {
+      "name": "inline-tribunal",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/inline-tribunal"
+      },
+      "description": "A second_opinion tool and /tribunal command: your diff is reviewed by Codex and Grok side by side, read-only, inside the session"
     }
   ]
 }
