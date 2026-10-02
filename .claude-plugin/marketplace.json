@@ -39,6 +39,14 @@
         "repo": "ccdwyer/assertion-guardian"
       },
       "description": "Blocks edits that weaken tests to fake a green run: removed or loosened assertions, added skips, deleted cases, swallowed errors, snapshot rewrites"
+    },
+    {
+      "name": "budget-governor",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/budget-governor"
+      },
+      "description": "Enforces session and daily spend caps: a live gauge above the prompt, a wrap-up nudge at 80%, and new prompts refused at the cap"
     }
   ]
 }
