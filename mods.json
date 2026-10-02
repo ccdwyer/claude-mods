@@ -1,0 +1,170 @@
+[
+  {
+    "name": "loop-breaker",
+    "title": "Loop Breaker",
+    "group": "Guardrails",
+    "blurb": "Notices when the agent keeps running the same failing command or flips an edit back and forth, refuses the next identical try, and shows a stuck meter above the prompt. A real code change or a different error resets it, so normal fix-and-retest work is never blocked.",
+    "screenshot": "03-refused.png"
+  },
+  {
+    "name": "assertion-guardian",
+    "title": "Assertion Guardian",
+    "group": "Guardrails",
+    "blurb": "Refuses edits that weaken tests to fake a green run: changed expected values, looser matchers, deleted assertions, `.skip`/`.only`, swallowed failures, bulk snapshot updates. You can allow a specific change once.",
+    "screenshot": "02-refused.png"
+  },
+  {
+    "name": "secret-sentry",
+    "title": "Secret Sentry",
+    "group": "Guardrails",
+    "blurb": "Redacts credentials in prompts and tool output before the model sees them, and refuses writes or shell commands that would put a key into a tracked file.",
+    "screenshot": "02-write-refused.png"
+  },
+  {
+    "name": "dependency-bouncer",
+    "title": "Dependency Bouncer",
+    "group": "Guardrails",
+    "blurb": "Checks packages against the npm and PyPI registries before they install. It blocks made-up names, typosquats and brand-new packages with install scripts, and flags dependencies you already have something for.",
+    "screenshot": "02-blocked.png"
+  },
+  {
+    "name": "quarantine",
+    "title": "Quarantine",
+    "group": "Guardrails",
+    "blurb": "Wraps untrusted tool output (web pages, MCP results, vendored files, fetched PR and issue text) in an \"untrusted content\" fence and defangs lines that read like instructions, so prompt injections arrive as data.",
+    "screenshot": "02-defanged.png"
+  },
+  {
+    "name": "budget-governor",
+    "title": "Budget Governor",
+    "group": "Guardrails",
+    "blurb": "Enforces session and daily spend caps. It shows a gauge above the prompt, tells the model to wrap up at 80%, and refuses new prompts at the cap until you raise it.",
+    "screenshot": "03-refused.png"
+  },
+  {
+    "name": "red-squiggle",
+    "title": "Red Squiggle",
+    "group": "Feedback loops",
+    "blurb": "Runs your project's own tsc, eslint and ruff right after each edit and attaches only the new errors to that edit's result, so the model fixes them on the same step.",
+    "screenshot": "02-diagnostics.png"
+  },
+  {
+    "name": "proof-decay",
+    "title": "Proof Decay",
+    "group": "Feedback loops",
+    "blurb": "Tracks whether \"tests passed\" is still true. Later edits turn results stale on a board above the prompt, and Oathkeeper refuses commit messages that claim checks pass when they aren't current.",
+    "screenshot": "02-stale.png"
+  },
+  {
+    "name": "review-ghost",
+    "title": "Review Ghost",
+    "group": "Feedback loops",
+    "blurb": "When the agent reads or edits a file on a branch with an open PR, it attaches that file's unresolved GitHub review threads. `/ghost` lists them all.",
+    "screenshot": "02-threads-attached.png"
+  },
+  {
+    "name": "redbox-relay",
+    "title": "Redbox Relay",
+    "group": "Feedback loops",
+    "blurb": "For React Native: attaches fresh simulator and emulator errors to your next prompt, and warns when an edit to native code needs `pod install` and a native rebuild.",
+    "screenshot": "02-rebuild-warning.png"
+  },
+  {
+    "name": "mirror-pane",
+    "title": "Mirror Pane",
+    "group": "Feedback loops",
+    "blurb": "After a UI edit, captures the simulator or emulator screen before and after hot reload and shows them side by side in a pane, with the percentage of pixels that changed. It never guesses between booted devices.",
+    "screenshot": null
+  },
+  {
+    "name": "inline-tribunal",
+    "title": "Inline Tribunal",
+    "group": "Workflow",
+    "blurb": "A `second_opinion` tool and a `/tribunal` command that send your diff to Codex and Grok in locked-down, read-only sandboxes and show both verdicts side by side.",
+    "screenshot": "02-pane.png"
+  },
+  {
+    "name": "stack-traffic-control",
+    "title": "Stack Traffic Control",
+    "group": "Workflow",
+    "blurb": "A departure board for `gh stack` stacked PRs (`/stack`), plus a guard that refuses force-pushes, rebases and PR base changes on stacked branches and points to the right `gh stack` command.",
+    "screenshot": "02-board.png"
+  },
+  {
+    "name": "process-concierge",
+    "title": "Process Concierge",
+    "group": "Workflow",
+    "blurb": "Every dev server, watcher and background build the agent starts gets an owner, a port and a stop button (`/procs`). It stops duplicate servers on a busy port, and only ever stops processes it can prove the agent started.",
+    "screenshot": null
+  },
+  {
+    "name": "netrunner-hud",
+    "title": "Netrunner HUD",
+    "group": "Visuals",
+    "blurb": "`/hud` opens a cyberpunk dashboard at 30fps: a radial context gauge, a token-rate oscilloscope, a tool-call waterfall, and live process, git and test widgets.",
+    "screenshot": null
+  },
+  {
+    "name": "codebase-galaxy",
+    "title": "Codebase Galaxy",
+    "group": "Visuals",
+    "blurb": "`/galaxy` draws your repo as a braille starfield: files are stars, imports are faint edges, and Claude's attention is a comet with a fading trail. Pan, zoom and click stars.",
+    "screenshot": null
+  },
+  {
+    "name": "netrunner-trace",
+    "title": "Netrunner Trace",
+    "group": "Visuals",
+    "blurb": "Every outbound action (curl, gh, npm, git push, WebFetch, MCP) flies as a packet from your machine to a ring of hosts. First-contact hosts flash amber and unexpected ones glow red, so you get a real security view.",
+    "screenshot": null
+  },
+  {
+    "name": "boot-sequence",
+    "title": "Boot Sequence",
+    "group": "Visuals",
+    "blurb": "A BIOS-style POST screen when a session starts that runs real checks (git, toolchains, simulators, dev-server ports, disk, context) and types each one out as `[ OK ]`, `[WARN]` or `[FAIL]`. `/boot` replays it.",
+    "screenshot": null
+  },
+  {
+    "name": "diff-seismograph",
+    "title": "Diff Seismograph",
+    "group": "Visuals",
+    "blurb": "A live braille seismograph of lines added and removed above the prompt, with `QUAKE M5.2` alerts on big edits. `/quake` adds a heat treemap of the repo, glowing where this session changed code.",
+    "screenshot": null
+  },
+  {
+    "name": "departure-board",
+    "title": "Departure Board",
+    "group": "Visuals",
+    "blurb": "A Solari split-flap board in amber that cascades flap by flap as Claude's tasks go from BOARDING to DEPARTED, DELAYED or CANCELLED. A mini board sits above the prompt and `/board` opens it fullscreen.",
+    "screenshot": null
+  },
+  {
+    "name": "transit-map",
+    "title": "Transit Map",
+    "group": "Visuals",
+    "blurb": "`/metro` shows your git history as a Vignelli subway map: branches are coloured lines, commits are stations, merges are interchanges, and your working tree is a train with one car per uncommitted file.",
+    "screenshot": null
+  },
+  {
+    "name": "fault-lacquer",
+    "title": "Fault Lacquer",
+    "group": "Visuals",
+    "blurb": "Kintsugi for your session: each failing operation cracks its lacquer tile, and when it later succeeds the cracks fill with animated gold seams. `/kintsugi` shows the wall.",
+    "screenshot": null
+  },
+  {
+    "name": "context-dungeon",
+    "title": "Context Dungeon",
+    "group": "Fun",
+    "blurb": "A roguelike pane driven by your real session: context is HP, failing tests spawn monsters named after the error, green runs land the killing blow, and commits open treasure chests.",
+    "screenshot": "02-monster.png"
+  },
+  {
+    "name": "speedrun-splits",
+    "title": "Speedrun Splits",
+    "group": "Fun",
+    "blurb": "A LiveSplit-style timer above the prompt. It splits automatically from recon to first edit to test to green to commit or PR, and keeps personal bests and gold segments for each repo.",
+    "screenshot": "02-live-deltas.png"
+  }
+]

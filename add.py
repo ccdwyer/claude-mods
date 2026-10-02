@@ -17,3 +17,6 @@ sh=open('install.sh').read()
 sh=_re.sub(r'^MODS=".*"$', f'MODS="{names}"', sh, flags=_re.M)
 sh=_re.sub(r'case " .* " in', f'case " {names} " in', sh)
 open('install.sh','w').write(sh)
+
+# Rebuild the README showcase from mods.json.
+subprocess.run(["python3", "build_readme.py"], check=True)

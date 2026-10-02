@@ -1,6 +1,6 @@
 # ccdwyer-mods
 
-Fourteen [Claude Code mods](https://claude.dev/blog/getting-started-with-claude-code-mods/): plugins of function hooks that change what Claude Code does and draw UI inside it. Each mod lives in its own repo; this repo is the marketplace that lists them all.
+19 [Claude Code mods](https://claude.dev/blog/getting-started-with-claude-code-mods/): plugins of function hooks that change what Claude Code does and draw UI inside it. Each mod lives in its own repo; this repo is the marketplace that lists them all.
 
 ## Install
 
@@ -23,6 +23,7 @@ Or from inside Claude Code, add the marketplace once, then install whichever mod
 - **Guardrails:** [Loop Breaker](#loop-breaker) · [Assertion Guardian](#assertion-guardian) · [Secret Sentry](#secret-sentry) · [Dependency Bouncer](#dependency-bouncer) · [Quarantine](#quarantine) · [Budget Governor](#budget-governor)
 - **Feedback loops:** [Red Squiggle](#red-squiggle) · [Proof Decay](#proof-decay) · [Review Ghost](#review-ghost) · [Redbox Relay](#redbox-relay)
 - **Workflow:** [Inline Tribunal](#inline-tribunal) · [Stack Traffic Control](#stack-traffic-control)
+- **Visuals:** [Boot Sequence](#boot-sequence) · [Diff Seismograph](#diff-seismograph) · [Departure Board](#departure-board) · [Transit Map](#transit-map) · [Fault Lacquer](#fault-lacquer)
 - **Fun:** [Context Dungeon](#context-dungeon) · [Speedrun Splits](#speedrun-splits)
 
 ## Guardrails
@@ -175,6 +176,58 @@ A departure board for `gh stack` stacked PRs (`/stack`), plus a guard that refus
 /plugin install stack-traffic-control@ccdwyer-mods
 ```
 
+## Visuals
+
+### Boot Sequence
+
+A BIOS-style POST screen when a session starts that runs real checks (git, toolchains, simulators, dev-server ports, disk, context) and types each one out as `[ OK ]`, `[WARN]` or `[FAIL]`. `/boot` replays it.
+
+*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/boot-sequence)
+
+```
+/plugin install boot-sequence@ccdwyer-mods
+```
+
+### Diff Seismograph
+
+A live braille seismograph of lines added and removed above the prompt, with `QUAKE M5.2` alerts on big edits. `/quake` adds a heat treemap of the repo, glowing where this session changed code.
+
+*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/diff-seismograph)
+
+```
+/plugin install diff-seismograph@ccdwyer-mods
+```
+
+### Departure Board
+
+A Solari split-flap board in amber that cascades flap by flap as Claude's tasks go from BOARDING to DEPARTED, DELAYED or CANCELLED. A mini board sits above the prompt and `/board` opens it fullscreen.
+
+*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/departure-board)
+
+```
+/plugin install departure-board@ccdwyer-mods
+```
+
+### Transit Map
+
+`/metro` shows your git history as a Vignelli subway map: branches are coloured lines, commits are stations, merges are interchanges, and your working tree is a train with one car per uncommitted file.
+
+*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/transit-map)
+
+```
+/plugin install transit-map@ccdwyer-mods
+```
+
+### Fault Lacquer
+
+Kintsugi for your session: each failing operation cracks its lacquer tile, and when it later succeeds the cracks fill with animated gold seams. `/kintsugi` shows the wall.
+
+*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/fault-lacquer)
+
+```
+/plugin install fault-lacquer@ccdwyer-mods
+```
+
 ## Fun
 
 ### Context Dungeon
@@ -203,4 +256,4 @@ A LiveSplit-style timer above the prompt. It splits automatically from recon to 
 
 ---
 
-Every mod is validated, type-checked and tested with `claude plugin test`, and went through several review rounds with GPT-6-Astra and Grok 4.7. Each repo's README lists what it does not cover.
+Every mod is validated, type-checked and tested with `claude plugin test`, and went through review rounds with GPT-6-Astra and Grok 4.7. Each repo's README lists what it does not cover.
