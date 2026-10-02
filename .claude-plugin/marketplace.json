@@ -9,14 +9,6 @@
   },
   "plugins": [
     {
-      "name": "loop-breaker",
-      "source": {
-        "source": "github",
-        "repo": "ccdwyer/loop-breaker"
-      },
-      "description": "Stops the agent repeating the same failing command or undoing its own edits, and shows a stuck meter above the prompt"
-    },
-    {
       "name": "review-ghost",
       "source": {
         "source": "github",
@@ -71,6 +63,14 @@
         "repo": "ccdwyer/dependency-bouncer"
       },
       "description": "Vets npm and PyPI packages before they install: blocks hallucinated, typosquatted and brand-new install-script packages, flags risky ones"
+    },
+    {
+      "name": "loop-breaker",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/loop-breaker"
+      },
+      "description": "Stops the agent repeating the same failing command or undoing its own edits, and shows a stuck meter above the prompt"
     }
   ]
 }
