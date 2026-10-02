@@ -15,6 +15,14 @@
         "repo": "ccdwyer/loop-breaker"
       },
       "description": "Stops the agent repeating the same failing command or undoing its own edits, and shows a stuck meter above the prompt"
+    },
+    {
+      "name": "review-ghost",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/review-ghost"
+      },
+      "description": "Attaches a file's unresolved GitHub PR review threads to the model's Read and Edit results, so review comments get fixed in the file it is already touching"
     }
   ]
 }
