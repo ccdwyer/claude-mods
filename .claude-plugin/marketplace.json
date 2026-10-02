@@ -47,6 +47,14 @@
         "repo": "ccdwyer/budget-governor"
       },
       "description": "Enforces session and daily spend caps: a live gauge above the prompt, a wrap-up nudge at 80%, and new prompts refused at the cap"
+    },
+    {
+      "name": "secret-sentry",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/secret-sentry"
+      },
+      "description": "Two-way secret scrubbing: redacts credentials before the model sees them and blocks writing them into tracked files or shell commands"
     }
   ]
 }
