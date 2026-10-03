@@ -191,6 +191,14 @@
         "repo": "ccdwyer/netrunner-trace"
       },
       "description": "A live node map of every host your agent reaches: packets fly from your machine to github.com, npm, PyPI, MCP servers and unknown hosts, with a log and first-contact alerts"
+    },
+    {
+      "name": "process-concierge",
+      "source": {
+        "source": "github",
+        "repo": "ccdwyer/process-concierge"
+      },
+      "description": "Gives every dev server, watcher and background process the agent starts an owner, a port and a stop button, and catches duplicate starts"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # ccdwyer-mods
 
-23 [Claude Code mods](https://claude.dev/blog/getting-started-with-claude-code-mods/): plugins of function hooks that change what Claude Code does and draw UI inside it. Each mod lives in its own repo; this repo is the marketplace that lists them all.
+24 [Claude Code mods](https://claude.dev/blog/getting-started-with-claude-code-mods/): plugins of function hooks that change what Claude Code does and draw UI inside it. Each mod lives in its own repo; this repo is the marketplace that lists them all.
 
 ## Install
 
@@ -22,7 +22,7 @@ Or from inside Claude Code, add the marketplace once, then install whichever mod
 
 - **Guardrails:** [Loop Breaker](#loop-breaker) · [Assertion Guardian](#assertion-guardian) · [Secret Sentry](#secret-sentry) · [Dependency Bouncer](#dependency-bouncer) · [Quarantine](#quarantine) · [Budget Governor](#budget-governor)
 - **Feedback loops:** [Red Squiggle](#red-squiggle) · [Proof Decay](#proof-decay) · [Review Ghost](#review-ghost) · [Redbox Relay](#redbox-relay) · [Mirror Pane](#mirror-pane)
-- **Workflow:** [Inline Tribunal](#inline-tribunal) · [Stack Traffic Control](#stack-traffic-control)
+- **Workflow:** [Inline Tribunal](#inline-tribunal) · [Stack Traffic Control](#stack-traffic-control) · [Process Concierge](#process-concierge)
 - **Visuals:** [Netrunner HUD](#netrunner-hud) · [Codebase Galaxy](#codebase-galaxy) · [Netrunner Trace](#netrunner-trace) · [Boot Sequence](#boot-sequence) · [Diff Seismograph](#diff-seismograph) · [Departure Board](#departure-board) · [Transit Map](#transit-map) · [Fault Lacquer](#fault-lacquer)
 - **Fun:** [Context Dungeon](#context-dungeon) · [Speedrun Splits](#speedrun-splits)
 
@@ -184,6 +184,16 @@ A departure board for `gh stack` stacked PRs (`/stack`), plus a guard that refus
 
 ```
 /plugin install stack-traffic-control@ccdwyer-mods
+```
+
+### Process Concierge
+
+Every dev server, watcher and background build the agent starts gets an owner, a port and a stop button (`/procs`). It stops duplicate servers on a busy port, and only ever stops processes it can prove the agent started.
+
+*Demo recording coming soon.* · [Repo](https://github.com/ccdwyer/process-concierge)
+
+```
+/plugin install process-concierge@ccdwyer-mods
 ```
 
 ## Visuals
